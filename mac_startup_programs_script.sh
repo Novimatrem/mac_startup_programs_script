@@ -37,6 +37,9 @@ fi
 
 # Here is the part that actually runs the software I wish to autostart on startup
 
-open "/Applications/Minecraft.app"
+# example
+#open "/Applications/Minecraft.app"
 
+# run mac_desktop_cleanliness without hanging up the terminal, so more can execute after this point, and/or we can exit cleanly without hanging.
+screen -dm bash -c "sleep 0s && nohup bash /Users/$(whoami)/mac_desktop_cleanliness/mac_desktop_cleanliness.sh && rm -rf $HOME/nohup.out && rm -rf $(pwd)/nohup.out && rm -rf /opt/nohup.out && disown & disown"
 
