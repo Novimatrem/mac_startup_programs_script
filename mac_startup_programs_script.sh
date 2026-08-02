@@ -46,12 +46,13 @@ fi
 # the problematic lines
 
 (
-    trap '' HUP TERM
-    exec /usr/bin/nohup /bin/bash \
-        /Users/zoeyglobe/mac_desktop_cleanliness/mac_desktop_cleanliness.sh \
-        </dev/null >/dev/null 2>&1
+    (
+        exec /bin/bash \
+            /Users/zoeyglobe/mac_desktop_cleanliness/mac_desktop_cleanliness.sh \
+            </dev/null >/dev/null 2>&1
+    ) &
+    disown
 ) &
-disown
 
 # /the problematic lines
 
