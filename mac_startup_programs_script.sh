@@ -42,7 +42,10 @@ fi
 
 # run mac_desktop_cleanliness without hanging up the terminal, so more can execute after this point, and/or we can exit cleanly without hanging.
 
-/usr/bin/nohup /bin/bash /Users/zoeyglobe/mac_desktop_cleanliness/mac_desktop_cleanliness.sh >/dev/null 2>&1 &
+
+# the problematic line
+eval "/usr/bin/nohup /bin/bash /Users/zoeyglobe/mac_desktop_cleanliness/mac_desktop_cleanliness.sh >/dev/null 2>&1 &"
+
 /bin/rm -f /Users/zoeyglobe/nohup.out /opt/nohup.out
 
 sleep 1s
