@@ -70,5 +70,14 @@ sleep 0.1s
 printf "\a"
 sleep 1s # it doesn't show unless i wait 1s here
 
+# hang forever so that any long-running scripts launched from here remain running
+echo "hang forever so that any long-running scripts launched from here remain running"
+osascript -e 'display notification "Holding onto your long-running scripts..." with title "mac_startup_programs_script.sh"'
+sleep 0.1s
+printf "\a"
+sleep 1s # it doesn't show unless i wait 1s here
+
+while true; do sleep 86400; done
+
 # EOF
 
