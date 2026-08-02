@@ -49,3 +49,9 @@ echo ""
 echo "Done."
 echo ""
 
+osascript -e 'display notification "Done." with title "mac_startup_programs_script.sh"'
+sleep 0.1s
+printf "\a"
+sleep 1s # it doesn't show unless i wait 1s here
+
+# EOF
