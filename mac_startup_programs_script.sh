@@ -23,7 +23,7 @@ cat <<EOT >> ~/Library/LaunchAgents/mac_startup_programs_script.plist
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>bash /Users/$(whoami)/mac_startup_programs_script/mac_startup_programs_script.sh</string>
+        <string>/Users/$(whoami)/mac_startup_programs_script/mac_startup_programs_script.sh</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
