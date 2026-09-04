@@ -69,6 +69,32 @@ fi
 
 
 
+# run mac_disable_time_announce without hanging up the terminal, so more can execute after this point, and/or we can exit cleanly without hanging.
+# due to the username being zoey, this only effects the mac mini
+
+
+# the problematic lines
+
+(
+    (
+        exec /bin/bash \
+            /Users/zoey/mac_disable_time_announce/mac_disable_time_announce.sh \
+            </dev/null >/dev/null 2>&1
+    ) &
+    disown
+) &
+
+# /the problematic lines
+
+
+
+
+
+
+
+
+
+
 
 # run mac_life_scheduler without hanging up the terminal, so more can execute after this point, and/or we can exit cleanly without hanging.
 # given this uses the username zoey, it runs specifically on my mac mini, and not my macbook neo
