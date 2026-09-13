@@ -94,6 +94,30 @@ fi
 
 
 
+# run mac_speaker_keep_awake without hanging up the termina
+# due to the username being zoey, this only effects the mac mini
+
+            
+# the problematic lines
+        
+(
+    (
+        exec /usr/bin/python3 \
+            /Users/zoey/mac_speaker_keep_awake/mac_speaker_keep_awake.py \
+            </dev/null >/dev/null 2>&1
+    ) &
+    disown
+) &
+
+# /the problematic lines
+
+
+
+
+
+
+
+
 
 
 # run mac_life_scheduler without hanging up the terminal, so more can execute after this point, and/or we can exit cleanly without hanging.
